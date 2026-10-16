@@ -5,13 +5,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Walter Meza · Mantenimiento eléctrico industrial en Mar del Plata</title>
-<meta name="description" content="Técnico electromecánico con más de 30 años en plantas de Mar del Plata y zona. Diagnóstico de tableros con informe, mantenimiento preventivo, motores y urgencias.">
+<meta name="description" content="Técnico electromecánico con casi 30 años en plantas de Mar del Plata y zona. Diagnóstico de tableros con informe, mantenimiento preventivo, motores y urgencias.">
 <meta property="og:title" content="Walter Meza · Mantenimiento eléctrico industrial">
 <meta property="og:description" content="Diagnóstico de tableros con informe, mantenimiento preventivo y urgencias en Mar del Plata y zona.">
 <meta property="og:locale" content="es_AR">
 <meta property="og:type" content="website">
 <!-- PENDIENTE: og:image (foto de Walter), og:url y canonical cuando esté el dominio -->
-<link rel="icon" type="image/svg+xml" href="logo/wmezatec-isotipo.svg">
+<link rel="icon" type="image/svg+xml" href="logo/wmtec-isotipo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
@@ -65,6 +65,7 @@ h3{font-size:1.25rem;font-variation-settings:"wdth" 90}
 p{margin:0 0 1em;max-width:var(--medida)}
 
 /* Botones */
+.top .nav a,.top .btn span{white-space:nowrap}
 .btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.5em;border-radius:var(--r-boton);font-weight:700;text-decoration:none;font-size:1rem;border:0;box-shadow:var(--sombra-boton);cursor:pointer;font-family:inherit}
 .btn-wsp{background:linear-gradient(135deg,#3be37a,#1fb556);color:#0d2b17}
 .btn-wsp:hover{background:linear-gradient(135deg,#45ea84,#22bf5c)}
@@ -91,12 +92,13 @@ html{scroll-behavior:smooth}
 .nav a{text-decoration:none;color:#cfd1c8;padding:.5em .85em;border-radius:var(--r-boton);font-weight:600;font-size:.95rem}
 .nav a:hover{color:var(--papel);background:var(--carbon-2)}
 .menu-btn{display:none;font:inherit;font-weight:600;color:var(--papel);background:linear-gradient(135deg,#4a4a4a,#2c2c2c);border:0;box-shadow:var(--sombra-boton);border-radius:var(--r-boton);padding:.5em 1em;cursor:pointer}
-.marca{display:block;line-height:0}
-.marca img{height:42px;width:auto}
+.marca{display:flex;align-items:center;gap:12px;line-height:1;text-decoration:none}
+.marca img{height:50px;width:auto}
+.marca-txt{color:#a9aba2;font-size:.74rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;border-left:2px solid #4a4a4a;padding-left:12px}
 
 /* Hero */
 .hero{position:relative;overflow:hidden;color:var(--papel);padding:clamp(32px,5vh,56px) 0 clamp(40px,6vh,64px);min-height:calc(100vh - 70px);display:flex;align-items:center;background:radial-gradient(900px 500px at 85% 10%,rgba(249,160,27,.16),transparent 60%),linear-gradient(180deg,#232323,#1b1b1b)}
-.hero::before{content:"";position:absolute;right:-6%;bottom:-18%;width:min(760px,70vw);aspect-ratio:104/88;background:url("logo/wmezatec-isotipo.svg") no-repeat center/contain;opacity:.06;pointer-events:none}
+.hero::before{content:"";position:absolute;right:-6%;bottom:-18%;width:min(760px,70vw);aspect-ratio:164/84;background:url("logo/wmtec-isotipo.svg") no-repeat center/contain;opacity:.06;pointer-events:none}
 .hero .wrap{position:relative}
 .hero h1{text-wrap:balance}
 .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;width:100%}
@@ -171,19 +173,83 @@ html{scroll-behavior:smooth}
 .sectores h3{font-size:1.15rem;margin:2px 0 6px}
 .sectores p{margin:0;color:var(--tinta-suave);font-size:.95rem;line-height:1.45}
 
+/* Quién soy: cifras y diplomas */
+.walter .wrap{align-items:start}
+.walter h2{max-width:none}
+.titulo-prof{margin:6px 0 0;font-size:1.2rem;font-weight:700;color:var(--naranja-osc)}
+.cifras{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cifras li{background:var(--carbon);color:var(--papel);border-radius:var(--r-tarjeta);padding:16px 18px}
+.cifras strong{display:block;font-size:2.4rem;font-weight:800;font-variation-settings:"wdth" 70;line-height:1;background:var(--degradado);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cifras span{display:block;margin-top:6px;font-size:.88rem;line-height:1.3;color:#cfd1c8}
+.tray-hoy{margin-top:22px}
+.diplomas{grid-column:1/-1}
+.tray-titulo{margin:0 0 14px;font-size:1.3rem}
+.diplomas ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.diplomas li{display:flex;gap:12px;align-items:center;background:var(--papel);border:1px solid #c9cbc4;border-radius:var(--r-tarjeta);padding:14px 16px;outline:2px solid #e0e1da;outline-offset:-7px}
+.sello{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--carbon);color:var(--naranja)}
+.sello svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.diplomas h4{margin:0;font-size:.98rem;line-height:1.15;font-weight:800;font-variation-settings:"wdth" 90}
+.diplomas li span:not(.sello){display:block;margin-top:3px;font-size:.82rem;color:var(--tinta-suave);line-height:1.25}
+@media (max-width:1000px){.diplomas ul{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.diplomas ul{grid-template-columns:1fr}.cifras{grid-template-columns:1fr}}
+
+/* Selector propio */
+.sel{position:relative}
+.sel-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;font:inherit;font-size:1.05rem;padding:.6em 1.05em;border:0;cursor:pointer;background:#e7e8e2;box-shadow:var(--sombra-campo);border-radius:var(--r-campo);color:var(--tinta)}
+.sel-btn::after{content:"";flex:none;width:9px;height:9px;border-right:3px solid var(--naranja-osc);border-bottom:3px solid var(--naranja-osc);transform:translateY(-3px) rotate(45deg);transition:transform .2s ease}
+.sel-btn[aria-expanded=true]{background:#fff;box-shadow:var(--sombra-campo),inset 0 0 0 2px var(--naranja)}
+.sel-btn[aria-expanded=true]::after{transform:translateY(2px) rotate(-135deg)}
+.sel-lista{position:absolute;left:0;right:0;top:calc(100% + 8px);z-index:20;margin:0;padding:8px;list-style:none;background:var(--carbon);border-radius:var(--r-tarjeta);box-shadow:0 22px 40px -12px rgba(0,0,0,.55);max-height:300px;overflow-y:auto;scrollbar-color:var(--naranja) transparent;scrollbar-width:thin}
+.sel-lista[hidden]{display:none}
+.sel-lista.arriba{top:auto;bottom:calc(100% + 8px)}
+.sel-lista li{padding:.6em 1em;border-radius:var(--r-boton);color:#e4e4de;font-weight:600;font-size:.98rem;cursor:pointer}
+.sel-lista li:hover,.sel-lista li.activa{background:rgba(255,255,255,.09);color:#fff}
+.sel-lista li[aria-selected=true]{background:var(--degradado);color:var(--carbon)}
+
+/* Barra de desplazamiento */
+html{scrollbar-color:var(--naranja) var(--carbon);scrollbar-width:auto}
+::-webkit-scrollbar{width:14px;height:14px}
+::-webkit-scrollbar-track{background:var(--carbon)}
+::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#ffc107,#f9a01b 55%,#e07b00);border-radius:999px;border:3px solid var(--carbon)}
+::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,#ffd13d,#ffb23a 55%,#f08a10)}
+
+/* Contacto en dos columnas: datos a la izquierda, formulario a la derecha */
+@media (min-width:861px){
+  .contacto .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);column-gap:56px;align-items:start}
+  .contacto .consulta{margin:0;max-width:none}
+  .contacto .contacto-izq .acciones{margin:24px 0 32px}
+  .contacto .datos{grid-template-columns:1fr 1fr}
+  .contacto .legal{grid-column:1/-1;margin-top:32px}
+}
+
+/* Formulario de contacto */
+.consulta{background:var(--degradado) top/100% 9px no-repeat,var(--papel);color:var(--tinta);border-radius:var(--r-tarjeta);padding:39px 32px 30px;margin:32px 0 0;max-width:760px;box-shadow:0 30px 60px -25px rgba(0,0,0,.7)}
+.consulta h3{font-size:1.6rem;font-variation-settings:"wdth" 85}
+.consulta .ayuda{color:var(--tinta-suave);font-size:.92rem;margin:6px 0 16px}
+.consulta .campos{grid-template-columns:1fr 1fr}
+.consulta textarea{width:100%;font:inherit;font-size:1.05rem;padding:.6em 1.05em;border:0;background:#e7e8e2;box-shadow:var(--sombra-campo);color:var(--tinta)}
+.consulta textarea{border-radius:var(--r-tarjeta);resize:vertical;min-height:110px}
+.consulta textarea:focus{background:#fff;outline:none;box-shadow:var(--sombra-campo),inset 0 0 0 2px var(--naranja)}
+.consulta textarea::placeholder{color:#a3a59d;opacity:1}
+.consulta .trampa{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.consulta .enviar{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.btn-enviar{background:var(--degradado);color:var(--carbon)}
+.btn-enviar:disabled{opacity:.6;cursor:wait}
+.consulta .estado-envio{margin:0;font-size:.95rem;font-weight:600}
+.consulta .estado-envio.ok{color:var(--verde)}
+.consulta .estado-envio.mal{color:var(--rojo)}
+
 /* Walter */
 .walter .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
 .foto-pend{aspect-ratio:4/5;border:2px dashed #9fa198;border-radius:var(--r-tarjeta);display:grid;place-items:center;text-align:center;color:var(--tinta-suave);font-size:.95rem;padding:24px;background:repeating-linear-gradient(135deg,transparent 0 14px,rgba(0,0,0,.025) 14px 28px)}
-.walter blockquote{margin:0;font-size:clamp(1.4rem,2.6vw,1.9rem);line-height:1.3;font-weight:600;font-variation-settings:"wdth" 88;max-width:30ch}
-.walter .quien{margin-top:20px;color:var(--tinta-suave)}
 
 /* Contacto */
 .contacto{background:var(--carbon);color:var(--papel);padding:88px 0 40px}
-.logo-pie{width:64px;height:auto;margin-bottom:24px}
+.logo-pie{width:120px;height:auto;margin-bottom:24px}
 .contacto h2{font-size:clamp(2.2rem,5vw,3.6rem);max-width:16ch}
 .contacto .acciones{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 56px}
 .datos{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;border-top:1px solid #45473f;padding:28px 0 0;margin:0}
-.datos a,.datos li > div{display:flex;align-items:center;gap:14px;padding:10px 12px 10px 10px;border-radius:var(--r-boton);text-decoration:none;color:var(--papel);font-size:1.05rem;transition:background .2s ease}
+.datos a,.datos li > div{display:flex;align-items:flex-start;gap:14px;padding:10px 12px 10px 10px;border-radius:var(--r-boton);text-decoration:none;color:var(--papel);font-size:1.05rem;transition:background .2s ease}
 .datos a:hover{background:rgba(255,255,255,.07)}
 .datos small{display:block;color:#a9aba2;font-size:.85rem;margin-bottom:2px}
 .dato-ico{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#4a4a4a,#2c2c2c);color:var(--naranja);box-shadow:var(--sombra-boton)}
@@ -211,19 +277,24 @@ html{scroll-behavior:smooth}
   .nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;background:var(--carbon);padding:8px 20px 16px;box-shadow:0 12px 20px rgba(0,0,0,.35)}
   .nav.abierto{display:flex;animation:bajar .25s ease-out}
   .top .nav a{padding:.8em 0;border-top:1px solid #3a3a3a;border-radius:0}
-  .marca img{height:36px}
+  .marca img{height:38px}
+  .marca-txt{display:none}
   .flotante{display:flex;position:fixed;right:16px;bottom:16px;z-index:5;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,#3be37a,#1fb556);color:#0d2b17;align-items:center;justify-content:center;box-shadow:6px 6px 18px rgba(0,0,0,.3)}
   .flotante svg{width:28px;height:28px}
 }
 @media (max-width:560px){
-  .datos{grid-template-columns:1fr}
+  .datos{grid-template-columns:1fr 1fr;gap:4px 8px}
+  .datos a,.datos li > div{gap:10px;padding:8px 4px;font-size:.92rem;line-height:1.2}
+  .dato-ico{width:38px;height:38px}
+  .dato-ico svg{width:19px;height:19px}
+  .legal{margin-top:36px}
   .sectores{grid-template-columns:1fr}
   .servicios{grid-template-columns:1fr}
 }
 @media (max-width:420px){
   .resultado .monto small{position:static;transform:none;margin-left:.25em}
-  .campos{grid-template-columns:1fr}
-  .calc{padding:29px 20px 20px}
+  .campos,.consulta .campos{grid-template-columns:1fr}
+  .calc,.consulta{padding:29px 20px 20px}
 }
 /* Contador de años */
 .anios{display:flex;align-items:center;gap:18px;margin-top:22px;padding-top:18px;border-top:1px solid #3a3a3a}
@@ -292,7 +363,7 @@ number-flow{--number-flow-char-height:.9em;--number-flow-mask-height:.2em;font-v
 <header class="top">
   <div class="wrap">
     <!-- PENDIENTE cuestionario P1: ¿Walter Meza, Martín Meza o Walter Martín Meza? -->
-    <a class="marca" href="#" aria-label="W Meza.tec, inicio"><img src="logo/wmezatec-horizontal.svg" alt="W Meza.tec · Electromecánica Industrial" width="306" height="62"></a>
+    <a class="marca" href="#" aria-label="WM TEC, inicio"><img src="logo/wmtec-logo-oscuro.svg" alt="WM TEC" width="66" height="49"><span class="marca-txt">Electromecánica<br>industrial</span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
     <nav id="nav" class="nav" aria-label="Secciones">
       <a href="#servicios">Servicios</a>
@@ -310,18 +381,18 @@ number-flow{--number-flow-char-height:.9em;--number-flow-mask-height:.2em;font-v
   <div class="wrap">
     <div>
       <h1>Tu planta no puede parar por un problema eléctrico.</h1>
-      <!-- PENDIENTE P9: confirmar "más de 30 años" -->
-      <p class="bajada">Reviso tableros, motores y protecciones antes de que fallen, y atiendo cuando algo ya falló. Más de 30 años trabajando en plantas de Mar del Plata y zona.</p>
+      <!-- Años: desde mar. de 1997 (LinkedIn). Actualizar cada año -->
+      <p class="bajada">Reviso tableros, motores y protecciones antes de que fallen, y atiendo cuando algo ya falló. Casi 30 años trabajando en plantas de Mar del Plata y zona.</p>
       <div class="acciones">
         <a class="btn btn-wsp" href="https://wa.me/5492235313019?text=Hola%20Walter%2C%20vengo%20de%20la%20web.%20Quiero%20pedir%20un%20diagn%C3%B3stico%20de%20tableros." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wsp"/></svg>Pedir un diagnóstico</a>
         <a class="btn btn-linea" href="tel:+5492235313019"><svg aria-hidden="true"><use href="#i-tel"/></svg>Llamar al 223 531 3019</a>
       </div>
       <p class="firma"><strong>Urgencias:</strong> si la línea está parada ahora, llamá directo. <!-- PENDIENTE P6: horarios y cobertura de urgencias --></p>
-      <!-- PENDIENTE P9: confirmar los años (cambiar data-hasta si no son 30) -->
+      <!-- Años en el rubro: 2026 - 1997 = 29 (cambiar data-hasta, el número y el texto sr-only) -->
       <div class="anios">
-        <span class="num" id="contador" data-hasta="30" aria-hidden="true">30</span>
+        <span class="num" id="contador" data-hasta="29" aria-hidden="true">29</span>
         <span class="txt"><strong>años en el rubro</strong>trabajando en plantas de la zona</span>
-        <span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">30 años en el rubro</span>
+        <span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">29 años en el rubro</span>
       </div>
     </div>
 
@@ -414,9 +485,19 @@ number-flow{--number-flow-char-height:.9em;--number-flow-mask-height:.2em;font-v
     <!-- PENDIENTE P10: reemplazar por foto real de Walter con casco y ropa de trabajo -->
     <div class="foto-pend">Foto de Walter trabajando<br>(pendiente)</div>
     <div>
-      <blockquote>“En una urgencia encontré un tablero funcionando de milagro. Casi siempre hay señales antes, lo que falta es alguien que las mire a tiempo.”</blockquote>
-      <p class="quien">Walter Meza, técnico electromecánico. Trabaja en Mar del Plata y la zona desde hace más de 30 años.</p>
-      <!-- PENDIENTE P26-P27: matrícula, habilitaciones, ART y seguro. Suman confianza, agregarlos acá -->
+      <h2>Walter Meza</h2>
+      <p class="titulo-prof">Técnico mecánico electricista</p>
+      <!-- Datos tomados del perfil de LinkedIn de Walter (may. 2026). PENDIENTE: confirmar nombre (P1), zona (P7) y matrícula (P26-P27) -->
+      <ul class="cifras">
+        <li><strong>1997</strong><span>trabajando en mantenimiento industrial</span></li>
+        <li><strong>3</strong><span>rubros: alimentos, metalúrgica y electricidad industrial</span></li>
+        <li><strong>8</strong><span>títulos y certificaciones</span></li>
+      </ul>
+      <p class="tray-hoy">Empezó como técnico de mantenimiento y llegó a jefe de sector en una planta de alimentos. Hoy trabaja por su cuenta en mantenimiento eléctrico industrial y comercial, y también hace <strong>service y reparación de grupos electrógenos</strong>, industriales y domésticos.</p>
+    </div>
+    <div class="diplomas">
+      <h3 class="tray-titulo">Títulos y certificaciones</h3>
+      <ul><li><span class="sello"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="13" r="8"/><path d="m12.5 13 2.5 2.5 4.5-5"/><path d="m11 20-2 9 7-3 7 3-2-9"/></svg></span><div><h4>Técnico mecánico electricista</h4><span>EEST N.º 3 Domingo F. Sarmiento</span></div></li><li><span class="sello"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="13" r="8"/><path d="m12.5 13 2.5 2.5 4.5-5"/><path d="m11 20-2 9 7-3 7 3-2-9"/></svg></span><div><h4>Gestión del mantenimiento</h4><span>Universidad FASTA</span></div></li><li><span class="sello"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="13" r="8"/><path d="m12.5 13 2.5 2.5 4.5-5"/><path d="m11 20-2 9 7-3 7 3-2-9"/></svg></span><div><h4>Frigorista</h4><span>Universidad Nacional de Mar del Plata</span></div></li><li><span class="sello"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="13" r="8"/><path d="m12.5 13 2.5 2.5 4.5-5"/><path d="m11 20-2 9 7-3 7 3-2-9"/></svg></span><div><h4>Foguista</h4><span>Universidad Nacional de Mar del Plata</span></div></li><li><span class="sello"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="13" r="8"/><path d="m12.5 13 2.5 2.5 4.5-5"/><path d="m11 20-2 9 7-3 7 3-2-9"/></svg></span><div><h4>Seguridad de las personas y puesta a tierra</h4><span>Schneider Electric</span></div></li><li><span class="sello"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="13" r="8"/><path d="m12.5 13 2.5 2.5 4.5-5"/><path d="m11 20-2 9 7-3 7 3-2-9"/></svg></span><div><h4>Metrología, calibración y medición</h4><span>INTI</span></div></li><li><span class="sello"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="13" r="8"/><path d="m12.5 13 2.5 2.5 4.5-5"/><path d="m11 20-2 9 7-3 7 3-2-9"/></svg></span><div><h4>ISO 9001, ISO 14000 y OHSAS</h4><span>Bureau Veritas Argentina</span></div></li><li><span class="sello"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="13" r="8"/><path d="m12.5 13 2.5 2.5 4.5-5"/><path d="m11 20-2 9 7-3 7 3-2-9"/></svg></span><div><h4>BPM y HACCP</h4><span>Bureau Veritas Argentina</span></div></li></ul>
     </div>
   </div>
 </section>
@@ -424,8 +505,10 @@ number-flow{--number-flow-char-height:.9em;--number-flow-mask-height:.2em;font-v
 
 <footer class="contacto" id="contacto">
   <div class="wrap">
-    <img class="logo-pie" src="logo/wmezatec-isotipo.svg" alt="" width="64" height="54">
+    <div class="contacto-izq">
+    <img class="logo-pie" src="logo/wmtec-isotipo.svg" alt="WM TEC" width="120" height="62">
     <h2>Contame qué tenés y lo vemos.</h2>
+    
     <div class="acciones">
       <a class="btn btn-wsp" href="https://wa.me/5492235313019?text=Hola%20Walter%2C%20vengo%20de%20la%20web.%20Quiero%20pedir%20un%20diagn%C3%B3stico%20de%20tableros." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wsp"/></svg>Escribime por WhatsApp</a>
       <a class="btn btn-linea" href="tel:+5492235313019"><svg aria-hidden="true"><use href="#i-tel"/></svg>Llamar</a>
@@ -437,12 +520,125 @@ number-flow{--number-flow-char-height:.9em;--number-flow-mask-height:.2em;font-v
       <li><div><span class="dato-ico"><svg aria-hidden="true"><use href="#i-ubi"/></svg></span><span><small>Zona</small>Mar del Plata y alrededores</span></div></li>
       <li><a href="https://www.instagram.com/wmeza.tec/" target="_blank" rel="noopener"><span class="dato-ico"><svg aria-hidden="true"><use href="#i-ig"/></svg></span><span><small>Instagram</small>@wmeza.tec</span></a></li>
     </ul>
+    </div>
+    <form class="consulta" id="consulta" aria-labelledby="consulta-titulo" novalidate>
+      <h3 id="consulta-titulo">Dejame tu consulta</h3>
+      <p class="ayuda">Escribí qué necesitás o pedí una cotización. Te respondo por WhatsApp o teléfono.</p>
+      <div class="campos">
+        <div class="campo"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required></div>
+        <div class="campo"><label for="f-empresa">Empresa (opcional)</label><input id="f-empresa" name="empresa" type="text" autocomplete="organization" placeholder="Nombre de la empresa"></div>
+        <div class="campo"><label for="f-tel">WhatsApp o teléfono</label><input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="223 555 1234" required></div>
+        <div class="campo"><label id="f-tipo-l">¿Qué necesitás?</label>
+          <div class="sel" id="sel-tipo">
+            <input type="hidden" id="f-tipo" name="tipo" value="Diagnóstico de tableros">
+            <button type="button" class="sel-btn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="f-tipo-l"><span>Diagnóstico de tableros</span></button>
+            <ul class="sel-lista" role="listbox" aria-labelledby="f-tipo-l" tabindex="-1" hidden><li role="option" data-v="Diagnóstico de tableros" aria-selected="true">Diagnóstico de tableros</li><li role="option" data-v="Mantenimiento preventivo">Mantenimiento preventivo</li><li role="option" data-v="Contrato de mantenimiento">Contrato de mantenimiento</li><li role="option" data-v="Tableros y motores">Tableros y motores</li><li role="option" data-v="Urgencia / falla">Urgencia / falla</li><li role="option" data-v="Grupo electrógeno industrial">Grupo electrógeno industrial</li><li role="option" data-v="Grupo electrógeno doméstico">Grupo electrógeno doméstico</li><li role="option" data-v="Pedir cotización">Pedir cotización</li><li role="option" data-v="Otra consulta">Otra consulta</li></ul>
+          </div></div>
+        <div class="campo ancho"><label for="f-msg">Mensaje</label><textarea id="f-msg" name="mensaje" placeholder="Contame qué pasa o qué querés cotizar" required></textarea></div>
+      </div>
+      <div class="trampa" aria-hidden="true"><label>No completar<input type="text" name="web" tabindex="-1" autocomplete="off"></label></div>
+      <div class="enviar">
+        <button class="btn btn-enviar" type="submit">Enviar consulta</button>
+        <p class="estado-envio" id="consulta-estado" role="status" aria-live="polite"></p>
+      </div>
+    </form>
     <p class="legal">© <span id="anio">2026</span> Walter Meza. Mantenimiento eléctrico industrial.</p>
   </div>
 </footer>
 
 <a class="flotante" href="https://wa.me/5492235313019?text=Hola%20Walter%2C%20vengo%20de%20la%20web." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg aria-hidden="true"><use href="#i-wsp"/></svg></a>
 
+<script>
+/* Formulario de contacto.
+   CLAVE vacía: al enviar abre WhatsApp con el mensaje armado (funciona hoy, sin servicio externo).
+   Con un servicio de formularios (p. ej. Web3Forms) poné acá la URL y la clave: el mensaje le llega
+   a Martín por mail/notificación y el visitante no sale de la página. Ver NOTAS_DISENO.md. */
+(function(){
+  var ENDPOINT="https://api.web3forms.com/submit", CLAVE="", WSP="5492235313019";
+  var f=document.getElementById("consulta"); if(!f)return;
+  var est=document.getElementById("consulta-estado"), btn=f.querySelector("button[type=submit]");
+  function dec(t,c){est.textContent=t;est.className="estado-envio "+(c||"")}
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    if(f.web.value)return;
+    if(!f.nombre.value.trim()||!f.telefono.value.trim()||!f.mensaje.value.trim()){dec("Completá nombre, teléfono y mensaje.","mal");return}
+    var d={nombre:f.nombre.value.trim(),empresa:f.empresa.value.trim(),telefono:f.telefono.value.trim(),tipo:f.tipo.value,mensaje:f.mensaje.value.trim()};
+    var txt="Hola, vengo de la web.\nNombre: "+d.nombre+(d.empresa?"\nEmpresa: "+d.empresa:"")+"\nTeléfono: "+d.telefono+"\nConsulta: "+d.tipo+"\n"+d.mensaje;
+    if(!ENDPOINT||!CLAVE){window.open("https://wa.me/"+WSP+"?text="+encodeURIComponent(txt),"_blank","noopener");dec("Se abrió WhatsApp con tu mensaje. Tocá enviar.","ok");return}
+    btn.disabled=true;dec("Enviando…");
+    fetch(ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+      body:JSON.stringify({access_key:CLAVE,subject:"Consulta web: "+d.tipo,from_name:d.nombre,name:d.nombre,empresa:d.empresa,telefono:d.telefono,tipo:d.tipo,message:d.mensaje})})
+      .then(function(r){return r.json()}).then(function(j){
+        if(!j.success)throw 0;
+        f.reset();dec("¡Listo! Recibí tu consulta y te respondo a la brevedad.","ok");
+      }).catch(function(){dec("No se pudo enviar. Escribime por WhatsApp.","mal")})
+      .then(function(){btn.disabled=false});
+  });
+})();
+</script>
+<script>
+/* Selector propio del formulario */
+(function(){
+  var cont=document.getElementById("sel-tipo"); if(!cont)return;
+  var btn=cont.querySelector(".sel-btn"), lista=cont.querySelector(".sel-lista"), inp=cont.querySelector("input");
+  var ops=[].slice.call(lista.children), ini=inp.value, act=0;
+  function marcar(i){ops.forEach(function(o,k){o.classList.toggle("activa",k===i)});act=i;ops[i].scrollIntoView({block:"nearest"})}
+  function abrir(){
+    lista.hidden=false;lista.classList.remove("arriba");
+    var r=lista.getBoundingClientRect();
+    if(r.bottom>innerHeight&&btn.getBoundingClientRect().top>r.height+20)lista.classList.add("arriba");
+    btn.setAttribute("aria-expanded","true");
+    marcar(Math.max(0,ops.findIndex(function(o){return o.dataset.v===inp.value})));
+  }
+  function cerrar(){lista.hidden=true;btn.setAttribute("aria-expanded","false")}
+  function elegir(i){
+    inp.value=ops[i].dataset.v;btn.firstElementChild.textContent=inp.value;
+    ops.forEach(function(o,k){k===i?o.setAttribute("aria-selected","true"):o.removeAttribute("aria-selected")});
+    cerrar();btn.focus();
+  }
+  btn.addEventListener("click",function(){lista.hidden?abrir():cerrar()});
+  ops.forEach(function(o,i){o.addEventListener("click",function(){elegir(i)});o.addEventListener("mousemove",function(){marcar(i)})});
+  cont.addEventListener("keydown",function(e){
+    var k=e.key;
+    if(k==="Escape"&&!lista.hidden){e.preventDefault();cerrar();btn.focus();return}
+    if(k==="ArrowDown"||k==="ArrowUp"){e.preventDefault();if(lista.hidden)abrir();else marcar((act+(k==="ArrowDown"?1:-1)+ops.length)%ops.length)}
+    else if((k==="Enter"||k===" ")&&!lista.hidden){e.preventDefault();elegir(act)}
+    else if(k==="Tab")cerrar();
+  });
+  document.addEventListener("click",function(e){if(!cont.contains(e.target))cerrar()});
+  document.getElementById("consulta").addEventListener("reset",function(){
+    setTimeout(function(){var i=Math.max(0,ops.findIndex(function(o){return o.dataset.v===ini}));elegir(i);cerrar()})
+  });
+})();
+</script>
+<script>
+/* Ajuste a la pantalla: en pantallas bajas (o con escala de Windows alta) cada sección se achica
+   lo justo para verse completa sin scroll interno. En celular no actúa. */
+(function(){
+  if(!("zoom" in document.body.style))return;
+  var secs=[].slice.call(document.querySelectorAll(".hero,main > section,footer.contacto")),MIN=.7,tm;
+  function ajustar(){
+    var top=document.querySelector(".top"),disp=innerHeight-(top?top.offsetHeight:0);
+    secs.forEach(function(sec){
+      var w=sec.querySelector(".wrap");if(!w)return;
+      w.style.zoom="";w.style.maxWidth="";
+      if(innerWidth<=860)return;
+      var z=1;
+      for(var i=0;i<4;i++){
+        var rs=sec.getBoundingClientRect().height,rw=w.getBoundingClientRect().height,pad=rs-rw;
+        if(rs<=disp+1&&i===0)return;
+        var nz=Math.max(MIN,Math.min(1,z*(disp-pad)/rw));
+        if(Math.abs(nz-z)<.005)break;
+        z=nz;w.style.zoom=z;w.style.maxWidth=(1120/z)+"px";
+      }
+    });
+  }
+  function pedir(){clearTimeout(tm);tm=setTimeout(ajustar,120)}
+  addEventListener("resize",pedir);addEventListener("load",ajustar);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(ajustar);
+  ajustar();
+})();
+</script>
 <script>
 (function(){
   var ids=["c-fact","c-horas","c-pers","c-costo","c-merma","c-otros"];
